@@ -11,18 +11,18 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body style="background-color: rgb(2, 17, 9); margin: 0; padding: 0;">
-    <nav class = 'navbar navbar-expand-lg navbar-dark bg-dark' style="width: 100vw;">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" style="display: inline;"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbar">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="/home" style="color: rgb(187, 255, 170);">Home</a>
-                    <a class="nav-item nav-link" href="/login" style="color: rgb(187, 255, 170);">Login</a>
-                    <a class="nav-item nav-link" href="/signup" style="color: rgb(187, 255, 170);">SignUp</a>
+    <nav class = 'navbar navbar-expand-lg navbar-dark bg-dark'>
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="/home" style="color: rgb(187, 255, 170);">Home</a>
+                        <a class="nav-item nav-link" href="/login" style="color: rgb(187, 255, 170);">Login</a>
+                        <a class="nav-item nav-link" href="/signup" style="color: rgb(187, 255, 170);">SignUp</a>
+                        <h2 style="color: rgb(61, 209, 24); text-align: right; margin-left: 25vw;" >TalkieEnTop</h2>
+                    </div>
                 </div>
-            </div>
-            <h1 style="color: rgb(61, 209, 24); display: inline; margin: 0px 25vw 0px 0px; width: 50vw; text-shadow: black; text-align: center;">TalkieEnTop</h1>
-        </div>
+
     </nav>
     {% block content %}{% endblock %}
 

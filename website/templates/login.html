@@ -1,4 +1,17 @@
 {% extends "base.html" %}
-{% block title %}TalkieEnTop{% endblock %}
+{% block title %}Login - TalkieEnTop{% endblock %}
 {% block content %}
+
+<form action="" method="POST">
+<h2 style="margin-top: 40px; margin-left: 5%; color: gainsboro;">Login</h2>
+<div class="form-group" style="margin-left: 5%; margin-top: 30px; width: 50vw;">
+    <label for="email" style="color: gainsboro; display: block;">Email Adress: </label>
+    <input type="text" id="email" name="email" class="form-control" style="border: none; background: rgb(170, 180, 165); color: rgb(6, 54, 6); border-radius: 10px; outline: none; margin-top: 10px; width: 25vw;">
+    <br><br>
+    <label for="password" style="color: gainsboro; display: block;">Password: </label>
+    <input type="password" id="password" name="password" class="form-control" style="border: none; background: rgb(170, 180, 165); color: rgb(6, 54, 6); border-radius: 10px; outline: none; margin-top: 10px; width: 25vw;">
+
+</div>
+</form>
+
 {% endblock %}
