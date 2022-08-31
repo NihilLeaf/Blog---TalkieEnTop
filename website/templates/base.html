@@ -20,11 +20,28 @@
                         <a class="nav-item nav-link" href="/home" style="color: rgb(187, 255, 170);">Home</a>
                         <a class="nav-item nav-link" href="/login" style="color: rgb(187, 255, 170);">Login</a>
                         <a class="nav-item nav-link" href="/signup" style="color: rgb(187, 255, 170);">Sign Up</a>
-                        <h2 style="color: rgb(61, 209, 24); text-align: right; margin-left: 25vw;" >TalkieEnTop</h2>
+                        <a href="/" style="color: rgb(61, 209, 24); text-align: right; margin-left: 25vw; text-decoration: none; font-size: 20pt; font-weight: bold; text-shadow: 2px black;" >TalkieEnTop</a>
                     </div>
                 </div>
 
     </nav>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'error' %}
+            <div class="alert alert-danger alter-dismissible fade show" role="alert" style="width: 30vw; margin: 1%;">
+                <div style="display: inline; width: 18vw;">{{ message }}</div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" style="text-align: right top; display: inline;"></button>
+            </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissible fade show" role="alert" style="width: 30vw; margin: 1%;">
+            <div style="display: inline; width: 18vw;">{{ message }}</div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" style="text-align: right top; display: inline;"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
     <div>
         {% block content %}{% endblock %}
     </div>

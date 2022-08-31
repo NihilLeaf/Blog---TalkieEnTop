@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, redirect, url_for, request, flash
 from . import db
 from .models import User
 from verify_email import verify_email
+from validate_email import validate_email
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -51,7 +52,7 @@ def signup():
             flash('Username too short!', category='error')
         elif len(password1) < 8:
             flash('Week password, try some like: ' + password_exemple, category='error')
-        elif verify_email(email) == False:
+        elif validate_email(email) == False:
             flash('Email not valid!', category='error')
         else:
             new_user = User(email=email, username=username, password=generate_password_hash(password1, method='sha256'))
